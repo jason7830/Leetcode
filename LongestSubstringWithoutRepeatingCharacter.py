@@ -1,3 +1,7 @@
+"""
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
+"""
+
 class Solution:
     def lengthOfLongestSubstring(self, s):
         """
@@ -19,7 +23,8 @@ class Solution:
                 hashTable[s[i]] = i 
             else:
                 hashTable[s[i]] = i 
-        if (len(s) - 1  - flag + 1) > maxlen : #if found no repeat char at the end then test if the length of the flag to the end is longer than the maxlen
+        #if found no repeat char at the end then test if the length of the flag to the end is longer than the maxlen
+        if (len(s) - 1  - flag + 1) > maxlen : 
             maxlen = (len(s) - 1  - flag + 1)
         return maxlen
 
